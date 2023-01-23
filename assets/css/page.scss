@@ -1,0 +1,381 @@
+/*============Header==========*/
+.header {
+	&-top {
+		background-color: $wh;
+		padding: 25px 0;
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	&__logo {
+		display: block;
+		margin-right: 50px;
+		a {
+			display: block;
+		}
+		img {
+			width: 205.07px;
+			margin-bottom: 16px;
+		}
+		&-descr {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.15;
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+	&-nav {
+		display: flex;
+		margin-right: 50px;
+		&__link {
+			display: inline-block;
+			margin-right: 40px;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.15;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	&__address {
+		display: inline-block;
+		color: #777777;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: $lh;
+		border-bottom: 1px dashed #C4C4C4;
+		margin-bottom: 15px;
+		transition: all .2s linear;
+		&:hover {
+			color: $bl;
+			border-color: $bl;
+		}
+	}
+	&__phone {
+		font-family: $ff;
+		font-size: 24px;
+		font-weight: 700;
+		color: $bl;
+		line-height: $lh;
+		margin-bottom: 7px;
+		@media(max-width: 1600px) {
+			@include adaptive-font(24, 17);
+		}
+	}
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&-bottom {
+		background-color: $bl;
+		&__inner {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+	}
+	&__burger {
+		display: none;
+	}
+	&-subnav {
+		margin-right: 65px;
+		ul {
+			display: flex;
+			&.header-subnav__mobile {
+				display: none;
+			}
+		}
+		li {
+			margin-right: 53.5px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		&__close {
+			display: none;
+			position: relative;
+			width: 25px;
+			height: 20px;
+			cursor: pointer;
+			margin-left: auto;
+			cursor: pointer;
+			margin-bottom: 10px;
+			&:before {
+				content: "";
+				width: 25px;
+				height: 2px;
+				background-color: $wh;
+				transform: rotate(45deg);
+				position: absolute;
+				top: 9px;
+				left: 0;
+				z-index: 1;
+			}
+			&:after {
+				content: "";
+				width: 25px;
+				height: 2px;
+				background-color: $wh;
+				transform: rotate(-45deg);
+				position: absolute;
+				top: 9px;
+				left: 0;
+				z-index: 1;
+			}
+		}
+		&__link {
+			display: inline-block;
+			padding: 25px 0;
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 700;
+			color: $wh;
+			line-height: 1.125;
+			position: relative;
+			&:after {
+				content: "";
+				width: 100%;
+				height: 3px;
+				background-color: $wh;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				z-index: 1;
+				opacity: 0;
+				transition: all .2s linear;
+			}
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&-info {
+		display: flex;
+		margin-bottom: -60px;
+		&__box {
+			width: 114px;
+			height: 125px;
+			margin-right: 12px;
+			&:last-child {
+				margin-right: 0;
+			}
+			&_gray {
+				background-color: #E7E8E9;
+				padding: 12px 15.5px 13px 0;
+				img {
+					max-width: 100%;
+				}
+			}
+			&_dgray {
+				background-color: #4E4E50;
+				padding: 12px 8px 13px 12px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+		&__item {
+			font-family: $ff;
+			font-size: 11px;
+			font-weight: 700;
+			color: $wh;
+			line-height: $lh;
+			margin-bottom: 6px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+/*===========/header==========*/
+
+.whatsapp-link {
+	display: inline-flex;
+	align-items: center;
+	margin-right: -5px;
+	>span {
+		display: inline-block;
+		margin-right: 8px;
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 700;
+		color: $bl;
+		line-height: $lh;
+		position: relative;
+		transition: all .2s linear;
+		&:after {
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-color: $green;
+			opacity: 0.25;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 1;
+			transition: all .2s linear;
+		}
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/*=========Adaptive==========*/
+@media(max-width: 1170px) {
+	.header {
+		&__logo {
+			margin-right: 30px;
+		}
+		&-nav {
+			margin-right: 30px;
+			&__link {
+				margin-right: 20px;
+			}
+		}
+		&-subnav {
+			margin-right: 30px;
+			li {
+				margin-right: 30px;
+			}
+		}
+		&-info {
+			&__box {
+				width: 80px;
+				height: 92px;
+				margin-right: 5px;
+				&_gray {
+					padding: 9px 12px 12px 0;
+				}
+				&_dgray {
+					padding: 9px 12px 12px 8px;
+				}
+			}
+			&__item {
+				font-size: 7px;
+			}
+		}
+	}
+}
+
+@media(max-width: 991px) {
+	.header {
+		position: relative;
+		&-nav {
+			display: none;
+		}
+		&-bottom {
+			justify-content: space-between;
+		}
+		&__burger {
+			display: block;
+			padding: 10px 0;
+			cursor: pointer;
+		}
+		&-subnav {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 200;
+			height: 100vh;
+			width: 100%;
+			background-color: $bl;
+			margin-right: 0;
+			padding: 40px 40px 120px;
+			transform: translateX(-100%);
+			transition: all .3s linear;
+			overflow: auto;
+			&.active {
+				transform: translateX(0);
+			}
+			ul {
+				flex-direction: column;
+				&.header-subnav__mobile {
+					display: block;
+					padding-bottom: 15px;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+					margin-bottom: 15px;
+				}
+			}
+			li {
+				margin-right: 0;
+			}
+			&__close {
+				display: block;
+			}
+			&__link {
+				font-size: 19px;
+				padding: 15px 0;
+				font-weight: 400;
+			}
+		}
+		&__address {
+			font-size: 13px;
+			margin-bottom: 14px;
+			.mobile-none {
+				display: none;
+			}
+		}
+	}
+}
+
+@media(max-width: 546px) {
+	.header {
+		&-top {
+			padding: 15px 0;
+		}
+		&__logo {
+			margin-right: 25px;
+			img {
+				width: 148px;
+				margin-bottom: 15px;
+			}
+			&-descr {
+				font-size: 13px;
+			}
+		}
+		&__phone {
+			margin-bottom: 0;
+		}
+	}
+
+	.whatsapp-link {
+		position: fixed;
+		right: 15px;
+		bottom: 15px;
+		z-index: 100;
+		flex-direction: column-reverse;
+		margin-right: 0;
+		border-radius: 10px;
+		background-color: rgba(35, 37, 41, 0.75);
+		padding: 10px 8px;
+		span {
+			margin-right: 0;
+			margin-top: 3px;
+			color: $wh;
+			font-size: 10px;
+			&:after {
+				display: none;
+			}
+		}
+		.mobile-none {
+			display: none;
+		}
+	}
+}
+/*=========/adaptive==========*/
