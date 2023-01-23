@@ -42,7 +42,7 @@ $(document).ready(function() {
 /*======Advantages (accordion)=============*/
   $(".advantages__name").on("click", function() {
     $(this).toggleClass("active");
-    $(this).next().slideToggle();
+    $(this).next().slideToggle(222);
     $(".advantages__name").not(this).next().slideUp();
     $(".advantages__name").not(this).removeClass('active');
   });

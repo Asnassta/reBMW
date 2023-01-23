@@ -486,7 +486,7 @@ body.hidden {
 			transform: translateY(-50%);
 			left: 8.33px;
 			z-index: 1;
-			transition: all .3s linear;
+			transition: all .2s linear;
 		}
 		&:after {
 			content: "";
@@ -498,7 +498,7 @@ body.hidden {
 			transform: translateY(-50%);
 			left: 18.33px;
 			z-index: 1;
-			transition: all .3s linear;
+			transition: all .2s linear;
 		}
 		&.active {
 			&:before, &:after {

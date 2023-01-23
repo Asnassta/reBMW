@@ -879,9 +879,9 @@ body.hidden {
     transform: translateY(-50%);
     left: 8.33px;
     z-index: 1;
-    -webkit-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    transition: all .3s linear; }
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
   .advantages__name:after {
     content: "";
     width: 3px;
@@ -894,9 +894,9 @@ body.hidden {
     transform: translateY(-50%);
     left: 18.33px;
     z-index: 1;
-    -webkit-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    transition: all .3s linear; }
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear; }
   .advantages__name.active:before, .advantages__name.active:after {
     background-color: #828282; }
   .advantages__name.active:after {
