@@ -247,6 +247,8 @@
   -ms-flex-align: center;
   align-items: center;
   margin-right: -5px; }
+  .whatsapp-link img {
+    width: 25px; }
   .whatsapp-link > span {
     display: inline-block;
     margin-right: 8px;
