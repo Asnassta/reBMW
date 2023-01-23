@@ -99,7 +99,7 @@
   margin-bottom: 7px; }
   @media (max-width: 1600px) {
     .header__phone {
-      font-size: calc(17px + 7 * ((100vw - 375px) / 1225)); } }
+      font-size: calc(16px + 8 * ((100vw - 375px) / 1225)); } }
 
 .header__contact {
   display: -webkit-box;
@@ -392,6 +392,16 @@
         display: none; }
     .whatsapp-link .mobile-none {
       display: none; } }
+
+@media (max-width: 360px) {
+  .header__phone {
+    font-size: 14px; }
+  .header__address {
+    font-size: 12px; }
+  .header__logo img {
+    width: 140px; }
+  .header__logo-descr {
+    font-size: 11px; } }
 
 /*=========/adaptive==========*/
 /*Reset
