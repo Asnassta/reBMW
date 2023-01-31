@@ -47,6 +47,20 @@ $(document).ready(function() {
     $(".advantages__name").not(this).removeClass('active');
   });
   /*==========/advantages (accordion)=========*/
+
+/*======Price-box_roll (accordion)=============*/
+  $(".price-box_roll .price-box__title").on("click", function() {
+    $(this).next().slideToggle(111);
+    $(this).parent().toggleClass("show");
+  });
+  /*==========/price-box_roll (accordion)=========*/
+
+  /*======FAQ (accordion)=============*/
+  $(".faq__question").on("click", function() {
+    $(this).next().slideToggle(222);
+    $(this).toggleClass("active");
+  });
+  /*==========/FAQ (accordion)=========*/
 });
 
 new Swiper('.certificates', {
@@ -86,4 +100,107 @@ new Swiper('.models__tab', {
       spaceBetween: 10,
     },
   },
+});
+
+new Swiper('.service__inner', {
+  enabled: false,
+  slidesPerView: 'auto',
+  breakpoints: {
+      992: {
+        enabled: false,
+        slidesPerView: 'auto',
+      },
+      766: {
+        enabled: true,
+        slidesPerView: 2.3,
+        spaceBetween: 15,
+      },
+      320: {
+        enabled: true,
+        slidesPerView: 1.5,
+        spaceBetween: 15,
+      },
+    },
+});
+
+new Swiper('.photogallery__slider', {
+  slidesPerView: 3,
+  spaceBetween: 10,
+  loop: true,
+  //observer: true,
+  navigation: {
+    nextEl: '.photogallery__arrow_next',
+    prevEl: '.photogallery__arrow_prev',
+  },
+  breakpoints: {
+    860: {
+      slidesPerView: 3,
+    },
+    766: {
+      slidesPerView: 2,
+    },
+    300: {
+      slidesPerView: 1.15,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    },
+  },
+});
+
+new Swiper('.footer-logos__inner', {
+  slidesPerView: 'auto',
+  spaceBetween: 79,
+  breakpoints: {
+    1100: {
+      spaceBetween: 79,
+    },
+    860: {
+      spaceBetween: 60,
+    },
+    300: {
+      spaceBetween: 40,
+    },
+  },
+});
+
+new Swiper('.activity__inner', {
+  enabled: false,
+  slidesPerView: 'auto',
+  breakpoints: {
+      767: {
+        enabled: false,
+        slidesPerView: 'auto',
+      },
+      546: {
+        enabled: true,
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 50,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.slider-arrow_next',
+          prevEl: '.slider-arrow_prev',
+        },
+      },
+      300: {
+        enabled: true,
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 50,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.slider-arrow_next',
+          prevEl: '.slider-arrow_prev',
+        },
+      },
+    },
 });

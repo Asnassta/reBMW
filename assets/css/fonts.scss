@@ -10,6 +10,16 @@
 
 @font-face {
   font-family: 'Arial';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:   url('../fonts/Arial-ItalicMT.woff2') format('woff2'),
+  url('../fonts/Arial-ItalicMT.woff') format('woff'),
+  url('../fonts/Arial-ItalicMT.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Arial';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -21,11 +31,21 @@
 @font-face {
   font-family: 'Inter';
   font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:   url('../fonts/Inter-Medium.woff2') format('woff2'),
+  url('../fonts/Inter-Medium.woff') format('woff'),
+  url('../fonts/Inter-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src:   url('../fonts/Inter-Bold.woff2') format('woff2'),
-  url('../fonts/Inter-Bold.woff') format('woff'),
-  url('../fonts/Inter-Bold.ttf') format('truetype'),
+  src:   url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+  url('../fonts/Inter-SemiBold.woff') format('woff'),
+  url('../fonts/Inter-SemiBold.ttf') format('truetype'),
 }
 
 @font-face {
@@ -33,7 +53,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src:   url('../fonts/Inter-SemiBold.woff2') format('woff2'),
-  url('../fonts/Inter-SemiBold.woff') format('woff'),
-  url('../fonts/Inter-SemiBold.ttf') format('truetype'),
+  src:   url('../fonts/Inter-Bold.woff2') format('woff2'),
+  url('../fonts/Inter-Bold.woff') format('woff'),
+  url('../fonts/Inter-Bold.ttf') format('truetype'),
 }
