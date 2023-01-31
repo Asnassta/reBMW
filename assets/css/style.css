@@ -1639,10 +1639,11 @@
     color: #444444;
     letter-spacing: -0.45px; }
     .mail-box__text p {
-      margin-bottom: 18px;
-      color: #444444 !important; }
+      margin-bottom: 18px; }
       .mail-box__text p:last-child {
         margin-bottom: 0; }
+    .mail-box__text i {
+      color: #444444 !important; }
     .mail-box__text span {
       font-style: normal;
       font-size: 16px;
