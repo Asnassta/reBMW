@@ -563,6 +563,8 @@
       font-size: 16px; }
     .footer__logo {
       display: none; }
+    .footer__text {
+      font-size: 12px; }
     .footer__inner {
       padding: 30px 0 15px;
       border-bottom: none;
