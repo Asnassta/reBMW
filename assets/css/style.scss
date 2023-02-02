@@ -102,6 +102,9 @@ body.hidden {
 	color: $bl;
 	line-height: 1.2;
 	text-transform: uppercase;
+	&_bold {
+		font-weight: 700;
+	}
 	@media(max-width: 1600px) {
 		@include adaptive-font(48, 30);
 	}
@@ -674,7 +677,69 @@ body.hidden {
 
 /*=========Service==========*/
 .service {
+	&_bw {
+		.service__wrapper {
+			margin-bottom: -28px;
+		}
+		.service__item {
+			margin-bottom: 28px;
+			.service__info {
+				width: 84%;
+			}
+			&_large, &_big {
+				.service__info {
+					width: 89.5%;
+				}
+			}
+			&:hover {
+				.service__photo {
+					&:after {
+						opacity: 0.65;
+					}
+				}
+			}
+		}
+		.service__photo {
+			position: relative;
+			z-index: 1;
+			img {
+				filter: grayscale(1);
+			}
+			&:after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: $blue;
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all .2s linear;
+				z-index: 2;
+			}
+		}
+		.service__info {
+			width: 89.5%;
+		}
+		.service__price {
+			font-family: $ffi;
+			font-weight: 600;
+		}
+		.service__photo {
+			img {
+				height: 250px;
+			}
+		}
+		.service__contact {
+			bottom: 31px;
+		}
+	}
+	&__maintitle {
+		margin-bottom: 40px;
+	}
 	&__inner {
+		position: relative;
+		margin-right: -30px;
 		&.swiper {
 			margin-right: -30px;
 		}
@@ -770,6 +835,10 @@ body.hidden {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	&_more {
+		padding: 30px 20px;
+		justify-content: center;
+	}
 	&__title {
 		font-family: $ffi;
 		font-size: 32px;
@@ -777,6 +846,10 @@ body.hidden {
 		color: $wh;
 		line-height: 1.125;
 		margin-bottom: 20px;
+		&.mb-40 {
+			margin-bottom: 40px;
+			padding-left: 10px;
+		}
 		@media(max-width: 1600px) {
 			@include adaptive-font(32, 22);
 		}
@@ -826,6 +899,34 @@ body.hidden {
 				&:after {
 					opacity: 1;
 				}
+			}
+		}
+	}
+	&__list {
+		&-price {
+			display: none;
+		}
+		li {
+			font-family: $ff;
+			font-size: 18px;
+			font-weight: 700;
+			color: $wh;
+			line-height: $lh;
+			padding-left: 21px;
+			position: relative;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				background-color: $wh;
+				border-radius: 50%;
+				position: absolute;
+				top: 7px;
+				left: 0;
 			}
 		}
 	}
@@ -1592,13 +1693,14 @@ body.hidden {
 
 	.service {
 		&__inner {
+			margin-right: -15px;
 			&.swiper {
 				margin-right: -15px;
 			}
 		}
 		&__item {
 			width: calc(29.25% - 15px);
-			margin-right: 10px;
+			margin-right: 15px;
 			&.swiper-slide {
 				width: calc(29.25% - 15px);
 				margin-right: 15px;
@@ -1619,8 +1721,8 @@ body.hidden {
 			}
 		}
 		&__contact {
-			right: 10px;
-			width: 24%;
+			right: 15px;
+			width: 23.5%;
 			.contact-box {
 				padding: 15px;
 			}
@@ -1724,35 +1826,70 @@ body.hidden {
 	}
 
 	.service {
+		&_bw {
+			.service__photo {
+				img {
+					height: 200px;
+				}
+			}
+			.service__contact {
+				.contact-box {
+					&_more {
+						height: 230px;
+					}
+				}
+			}
+			.service__item {
+				.service__info {
+					width: 92%;
+				}
+			}
+		}
 		&__inner {
 			&.swiper {
 				margin-right: -15px;
 				padding-right: 15px;
 			}
 		}
-		&__wrapper {
-			flex-wrap: nowrap;
-			margin-bottom: 0;
-		}
-		&__item {
-			margin-bottom: 0;
-			margin-right: 0;
-			padding-bottom: 0;
-			&.swiper-slide {
+		&__swiper {
+			.service__wrapper {
+				flex-wrap: nowrap;
+				margin-bottom: 0;
+			}
+			.service__item {
+				margin-bottom: 0;
 				margin-right: 0;
+				padding-bottom: 0;
+				&.swiper-slide {
+					margin-right: 0;
+				}
+			}
+			.service__contact {
+				margin-top: 10px;
+				position: static;
+				width: 100%;
+				.contact-box {
+					padding: 32px;
+					height: auto;
+					&_more {}
+				}
 			}
 		}
 		&__info {
 			bottom: 0;
 			width: 68%;
 		}
-		&__contact {
-			margin-top: 10px;
-			position: static;
-			width: 100%;
-			.contact-box {
-				padding: 32px;
-				height: auto;
+	}
+
+	.contact-box {
+		&__list {
+			li {
+				font-size: 14px;
+			}
+		}
+		&__title {
+			&.mb-40 {
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -1970,6 +2107,112 @@ body.hidden {
 		}
 		&__description {
 			margin-bottom: 30px;
+		}
+	}
+
+	.service {
+		&__maintitle {
+			margin-bottom: 24px;
+		}
+		&_bw {
+			.service__inner {
+				margin-right: 0;
+			}
+			.service__wrapper {
+				margin-bottom: 0;
+			}
+			.service__item {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 0;
+				padding: 10px 44px 10px 0;
+				border-bottom: 1px solid #E7E7E7;
+				border-top: 1px solid #E7E7E7;
+				&:after {
+					content: "";
+					width: 20px;
+					height: 20px;
+					background: url("../images/arrow-tail_blue.svg") center no-repeat;
+					position: absolute;
+					top: 10px;
+					right: 0;
+					z-index: 1;
+				}
+				.service__info {
+					width: 100%;
+				}
+				&_big, &_large {
+					.service__info {
+						width: 100%;
+					}
+				}
+			}
+			.service__photo {
+				display: none;
+			}
+			.service__info {
+				position: static;
+				padding: 0;
+			}
+			.service__title {
+				font-size: 22px;
+				line-height: 1;
+				br {
+					display: none;
+				}
+			}
+			.service__contact {
+				position: static;
+				width: 100%;
+				.contact-box {
+					height: auto;
+					padding: 0;
+					background-color: transparent;
+					&_more {
+						height: auto;
+					}
+					&__title {
+						display: none;
+					}
+					&__list {
+						&-name {
+							font-family: $ffi;
+							font-size: 22px;
+							font-weight: 700;
+							color: $blue;
+							line-height: 1;
+							margin-bottom: 10px;
+						}
+						&-price {
+							display: block;
+							font-family: $ffi;
+							gap: 16px;
+							font-weight: 600;
+							color: $bl;
+							line-height: 1.21;
+						}
+						li {
+							margin-bottom: 0;
+							padding: 10px 44px 10px 0;
+							border-bottom: 1px solid #E7E7E7;
+							border-top: 1px solid #E7E7E7;
+							&:after {
+								content: "";
+								width: 20px;
+								height: 20px;
+								background: url("../images/arrow-tail_blue.svg") center no-repeat;
+								position: absolute;
+								top: 10px;
+								right: 0;
+								z-index: 1;
+							}
+							&:before {
+								display: none;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -2344,6 +2587,22 @@ body.hidden {
 	.service {
 		&__info {
 			padding: 11px 7px 5px 7px;
+		}
+		&_bw {
+			.service__title {
+				font-size: 20px;
+			}
+			.service__contact {
+				position: static;
+				width: 100%;
+				.contact-box {
+					&__list {
+						&-name {
+							font-size: 20px;
+						}
+					}
+				}
+			}
 		}
 	}
 	.projects {
