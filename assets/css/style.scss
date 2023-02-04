@@ -131,6 +131,9 @@ body.hidden {
 	@media(max-width: 1600px) {
 		@include adaptive-font(36, 24);
 	}
+	&_center {
+		text-align: center;
+	}
 }
 
 .title-big {
@@ -150,6 +153,9 @@ body.hidden {
 	font-weight: 400;
 	color: $gray;
 	line-height: 1.5;
+	&_big {
+		font-size: 18px;
+	}
 	p {
 		margin-bottom: 20px;
 		&:last-child {
@@ -183,6 +189,18 @@ body.hidden {
 	}
 	.swiper-pagination-bullet-active {
 		background-color: $bl;
+	}
+	&_blue {
+		.swiper-pagination-bullet-active {
+			background-color: $blue;
+		}
+		.slider-arrow {
+			&:hover {
+				svg {
+					fill: $blue;
+				}
+			}
+		}
 	}
 }
 
@@ -257,6 +275,15 @@ body.hidden {
 
 /*=========About========*/
 .about {
+	&_repair {
+		padding: 80px 0;
+		.about-video {
+			width: 57.8%;
+		}
+		.about__info {
+			width: 42.2%;
+		}
+	}
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -678,11 +705,18 @@ body.hidden {
 /*=========Service==========*/
 .service {
 	&_bw {
+		.service__title {
+			font-size: 30px;
+			@media(max-width: 1600px) {
+				@include adaptive-font(30, 22);
+			}
+		}
 		.service__wrapper {
 			margin-bottom: -28px;
 		}
 		.service__item {
 			margin-bottom: 28px;
+			width: calc(28.65% - 30px);
 			.service__info {
 				width: 84%;
 			}
@@ -690,6 +724,12 @@ body.hidden {
 				.service__info {
 					width: 89.5%;
 				}
+			}
+			&_big {
+				width: calc(37.5% - 30px);
+			}
+			&_large {
+				width: calc(42.7% - 30px);
 			}
 			&:hover {
 				.service__photo {
@@ -734,7 +774,24 @@ body.hidden {
 			bottom: 31px;
 		}
 	}
+	&_repair {
+		.service__title {
+			font-size: 28px;
+			@media(max-width: 1600px) {
+				@include adaptive-font(28, 22);
+			}
+			&_many {
+				font-size: 27px;
+				@media(max-width: 1600px) {
+					@include adaptive-font(27, 22);
+				}
+			}
+		}
+	}
 	&__maintitle {
+		margin-bottom: 40px;
+	}
+	&__subtitle {
 		margin-bottom: 40px;
 	}
 	&__inner {
@@ -824,6 +881,9 @@ body.hidden {
 		.contact-box {
 			height: 280px;
 		}
+		&_big {
+			width: 38.4%;
+		}
 	}
 }
 /*=========/service==========*/
@@ -902,9 +962,33 @@ body.hidden {
 			}
 		}
 	}
+	&__row {
+		display: flex;
+		>* {
+			margin-right: 13px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		.contact-box__list {
+			&-name {
+				font-size: 15px;
+			}
+		}
+	}
 	&__list {
+		&_min {
+			padding-left: 8px;
+			.contact-box__list-name {
+				font-size: 16px;
+			}
+		}
 		&-price {
 			display: none;
+		}
+		&-name {
+			display: block;
+			color: $wh;
 		}
 		li {
 			font-family: $ff;
@@ -1692,6 +1776,17 @@ body.hidden {
 	}
 
 	.service {
+		&_bw {
+			.service__item {
+				width: calc(28.65% - 15px);
+				&_big {
+					width: calc(37.5% - 15px);
+				}
+				&_large {
+					width: calc(42.7% - 15px);
+				}
+			}
+		}
 		&__inner {
 			margin-right: -15px;
 			&.swiper {
@@ -1723,6 +1818,12 @@ body.hidden {
 		&__contact {
 			right: 15px;
 			width: 23.5%;
+			&_big {
+				width: calc(42.7% - 15px);
+				.contact-box__list-name {
+					font-size: 12px;
+				}
+			}
 			.contact-box {
 				padding: 15px;
 			}
@@ -1776,6 +1877,15 @@ body.hidden {
 
 @media(max-width: 991px) {
 	.about {
+		&_repair {
+			padding: 20px 0;
+			.about-video {
+				width: 100%;
+			}
+			.about__info {
+				width: 100%;
+			}
+		}
 		&__inner {
 			flex-direction: column;
 		}
@@ -1871,7 +1981,6 @@ body.hidden {
 				.contact-box {
 					padding: 32px;
 					height: auto;
-					&_more {}
 				}
 			}
 		}
@@ -1885,6 +1994,12 @@ body.hidden {
 		&__list {
 			li {
 				font-size: 14px;
+			}
+			&_min {
+				padding-left: 0;
+				.contact-box__list-name {
+					font-size: 12px;
+				}
 			}
 		}
 		&__title {
@@ -2114,6 +2229,9 @@ body.hidden {
 		&__maintitle {
 			margin-bottom: 24px;
 		}
+		&__subtitle {
+			margin-bottom: 24px;
+		}
 		&_bw {
 			.service__inner {
 				margin-right: 0;
@@ -2174,6 +2292,12 @@ body.hidden {
 					&__title {
 						display: none;
 					}
+					&__row {
+						display: block;
+						>* {
+							margin-right: 0;
+						}
+					}
 					&__list {
 						&-name {
 							font-family: $ffi;
@@ -2182,6 +2306,18 @@ body.hidden {
 							color: $blue;
 							line-height: 1;
 							margin-bottom: 10px;
+							position: relative;
+							padding-right: 44px;
+							&:after {
+								content: "";
+								width: 20px;
+								height: 20px;
+								background: url("../images/arrow-tail_blue.svg") center no-repeat;
+								position: absolute;
+								top: 0;
+								right: 0;
+								z-index: 1;
+							}
 						}
 						&-price {
 							display: block;
@@ -2193,19 +2329,9 @@ body.hidden {
 						}
 						li {
 							margin-bottom: 0;
-							padding: 10px 44px 10px 0;
+							padding: 10px 0;
 							border-bottom: 1px solid #E7E7E7;
 							border-top: 1px solid #E7E7E7;
-							&:after {
-								content: "";
-								width: 20px;
-								height: 20px;
-								background: url("../images/arrow-tail_blue.svg") center no-repeat;
-								position: absolute;
-								top: 10px;
-								right: 0;
-								z-index: 1;
-							}
 							&:before {
 								display: none;
 							}
@@ -2382,6 +2508,9 @@ body.hidden {
 	}
 	.description {
 		font-size: 14px;
+		&_big {
+			font-size: 14px;
+		}
 		p {
 			margin-bottom: 15px;
 		}
@@ -2580,9 +2709,17 @@ body.hidden {
 	}
 }
 
+@media(max-width: 376px) {
+	.application {
+		&__title {
+			padding: 0 70px;
+		}
+	}
+}
+
 @media(max-width: 360px) {
 	.title-big {
-		font-size: 16px;
+		font-size: 17px;
 	}
 	.service {
 		&__info {

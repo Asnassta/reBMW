@@ -102,7 +102,7 @@ new Swiper('.models__tab', {
   },
 });
 
-new Swiper('.service__inner', {
+new Swiper('.service__swiper', {
   enabled: false,
   slidesPerView: 'auto',
   breakpoints: {
@@ -203,4 +203,18 @@ new Swiper('.activity__inner', {
         },
       },
     },
+});
+
+new Swiper('.info-slider__inner', {
+  slidesPerView: 1,
+  //autoHeight: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.slider-arrow_next',
+    prevEl: '.slider-arrow_prev',
+  },
+  loop: true,
 });
