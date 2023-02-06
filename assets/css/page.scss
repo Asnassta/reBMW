@@ -78,7 +78,7 @@
 		align-items: flex-end;
 	}
 	&-bottom {
-		background-color: $bl;
+		background-color: $black;
 		&__inner {
 			display: flex;
 			align-items: flex-start;
@@ -139,7 +139,7 @@
 			padding: 25px 0;
 			font-family: $ff;
 			font-size: 16px;
-			font-weight: 700;
+			font-weight: 400;
 			color: $wh;
 			line-height: 1.125;
 			position: relative;
