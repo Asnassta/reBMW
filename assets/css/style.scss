@@ -856,6 +856,7 @@ body.hidden {
 	}
 	&__title {
 		font-smooth: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 		font-family: $ffi;
 		font-size: 32px;
 		font-weight: 700;

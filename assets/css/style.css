@@ -3147,6 +3147,7 @@ body.hidden {
 
 .service__title {
   font-smooth: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-weight: 700;
