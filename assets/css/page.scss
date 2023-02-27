@@ -178,9 +178,15 @@
 			}
 			&_gray {
 				background-color: #E7E8E9;
-				padding: 12px 15.5px 13px 0;
+				padding: 12px 8px 13px 8px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
 				img {
 					max-width: 100%;
+				}
+				.header-info__item {
+					color: $bl;
 				}
 			}
 			&_dgray {
@@ -410,7 +416,7 @@
 				height: 92px;
 				margin-right: 5px;
 				&_gray {
-					padding: 9px 12px 12px 0;
+					padding: 9px 12px 12px 8px;
 				}
 				&_dgray {
 					padding: 9px 12px 12px 8px;
@@ -510,7 +516,7 @@
 			padding-right: 0;
 			margin-right: 0;
 			font-size: 13px;
-			&:first-child {
+			&:nth-last-child(2) {
 				display: inline-block;
 				padding-left: 18px;
 				&:before {

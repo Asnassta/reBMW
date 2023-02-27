@@ -218,3 +218,16 @@ new Swiper('.info-slider__inner', {
   },
   loop: true,
 });
+
+new Swiper('.article-slider', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.slider-arrow_next',
+    prevEl: '.slider-arrow_prev',
+  },
+  loop: true,
+});
