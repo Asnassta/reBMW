@@ -1233,9 +1233,6 @@ body.hidden {
 
 /*==========/intro==========*/
 /*=========About========*/
-.about .ytp-show-cards-title {
-  display: none; }
-
 .about_repair {
   padding: 80px 0; }
   .about_repair .about-video {
@@ -1259,11 +1256,10 @@ body.hidden {
   .about-video__content > * {
     width: 100%;
     min-height: 200px;
-    height: 380px;
+    height: 380px; }
+  .about-video__content img {
     -o-object-fit: cover;
     object-fit: cover; }
-  .about-video__content .html5-video-player .video-stream {
-    width: 100%; }
   .about-video__icon {
     position: absolute;
     top: 50%;
