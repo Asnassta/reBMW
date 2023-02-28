@@ -648,7 +648,7 @@ body.hidden {
 				background-color: #828282;
 			}
 			&:after {
-				transform: translateY(-50%) rotate(90deg);
+				//transform: translateY(-50%) rotate(90deg);
 			}
 		}
 	}
@@ -951,15 +951,16 @@ body.hidden {
 		z-index: 1;
 	}
 	&__title {
-		font-smooth: antialiased;
+		font-smooth: subpixel-antialiased;
 		-moz-osx-font-smoothing: grayscale;
-		font-family: $ffi;
+		-webkit-font-smoothing: subpixel-antialiased;
+		font-family: sans-serif;
 		font-size: 32px;
-		font-weight: 600;
+		font-weight: 700;
 		color: $blue;
 		line-height: 1.125;
 		margin-bottom: 10px;
-		transition: all .2s linear;
+		//transition: all .2s linear;
 		@media(max-width: 1600px) {
 			@include adaptive-font(32, 18);
 		}

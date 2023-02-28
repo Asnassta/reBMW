@@ -171,6 +171,17 @@
 			@include adaptive-font(48, 30);
 		}
 	}
+	&__description {
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		margin-top: 10px;
+		@media(max-width: 1600px) {
+			@include adaptive-font(18, 14);
+		}
+	}
 	&__photo {
 		img {
 			width: 100%;
