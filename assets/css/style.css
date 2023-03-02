@@ -3653,6 +3653,12 @@ body.hidden {
   padding-top: 70px;
   position: relative;
   overflow: hidden; }
+  .products_maintenance .products__box_small .products__photo {
+    height: 200px; }
+    .products_maintenance .products__box_small .products__photo img {
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain; }
   .products_equipping {
     padding-top: 0; }
     .products_equipping:after {
@@ -4708,6 +4714,40 @@ body.hidden {
       font-size: calc(16px + 4 * ((100vw - 375px) / 1225)); } }
 
 /*=========/stages==========*/
+/*=========Quote-box========*/
+.quote-box {
+  background-color: #F3F3F3;
+  padding: 32px 32px 24px;
+  position: relative;
+  margin-bottom: 40px; }
+  .quote-box:last-child {
+    margin-bottom: 0; }
+  .quote-box:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: url("../images/quote.svg") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 32px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1; }
+  .quote-box__text {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #232529;
+    line-height: 1.5; }
+    @media (max-width: 1600px) {
+      .quote-box__text {
+        font-size: calc(14px + 4 * ((100vw - 375px) / 1225)); } }
+
+/*=========/quote-box========*/
+/*=========About-box======*/
+/*=========/about-box======*/
 /*============Adaptive=============*/
 @media (max-width: 991px) {
   .article__photo.mb-80 {
@@ -5093,6 +5133,14 @@ body.hidden {
         object-position: top left; } }
 
 @media (max-width: 546px) {
+  .quote-box {
+    padding: 20px 15px;
+    margin-top: 25px;
+    margin-bottom: 20px; }
+    .quote-box:before {
+      left: 15px;
+      width: 25px;
+      height: 25px; }
   .article_sr .article__title {
     font-size: 30px; }
   .article-slider__box {
@@ -5118,6 +5166,8 @@ body.hidden {
     height: 200px; }
     .products_equipping .products__box_big .products__photo img {
       height: 200px; }
+  .products_maintenance .products__box_small .products__photo {
+    height: 150px; }
   .products__box_small .products__photo {
     width: 150px; }
   .products__box_big {
