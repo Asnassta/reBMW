@@ -1797,7 +1797,10 @@ body.hidden {
   font-weight: 700;
   color: #1F72E4;
   line-height: 1.125;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear; }
   @media (max-width: 1600px) {
     .service__title {
       font-size: calc(18px + 14 * ((100vw - 375px) / 1225)); } }
@@ -2469,7 +2472,7 @@ body.hidden {
     font-size: 16px;
     font-weight: 400;
     color: #999999;
-    line-height: 1.125;
+    line-height: 1.25;
     margin-bottom: 15px; }
     .contact__description span {
       font-weight: 700; }
@@ -2489,7 +2492,19 @@ body.hidden {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    .contact__row:last-child {
+      margin-bottom: 0; }
+    .contact__row_end {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
+  .contact__col {
+    /*width: calc(50% - 30px);
+		margin-right: 15px;*/ }
+    .contact__col:last-child {
+      text-align: right; }
   .contact__whatspp {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -2523,6 +2538,42 @@ body.hidden {
         transition: all .2s linear; }
       .contact__whatspp span:hover:after {
         opacity: 1; }
+  .contact__icon-link {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #232529;
+    line-height: 1.15; }
+    .contact__icon-link img {
+      width: 18px;
+      margin-left: 10px; }
+    .contact__icon-link span {
+      position: relative; }
+      .contact__icon-link span:after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #232529;
+        opacity: 0.25;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        z-index: 1;
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear; }
+    .contact__icon-link:hover span:after {
+      opacity: 1; }
   .contact__mail {
     display: inline-block;
     font-family: "Arial", sans-serif;
@@ -3134,6 +3185,14 @@ body.hidden {
         box-shadow: none; }
     .contact__link {
       display: inline-block; }
+    .contact__icon-link {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      .contact__icon-link img {
+        margin-right: 10px;
+        margin-left: 0; }
     .contact__map {
       display: none; }
     .contact__box {

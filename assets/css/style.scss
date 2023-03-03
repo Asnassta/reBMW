@@ -960,7 +960,7 @@ body.hidden {
 		color: $blue;
 		line-height: 1.125;
 		margin-bottom: 10px;
-		//transition: all .2s linear;
+		transition: all .2s linear;
 		@media(max-width: 1600px) {
 			@include adaptive-font(32, 18);
 		}
@@ -1666,7 +1666,7 @@ body.hidden {
 		font-size: 16px;
 		font-weight: 400;
 		color: $gray2;
-		line-height: 1.125;
+		line-height: 1.25;
 		margin-bottom: 15px;
 		span {
 			font-weight: 700;
@@ -1684,6 +1684,21 @@ body.hidden {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&_end {
+			justify-content: flex-end;
+		}
+	}
+	&__col {
+		/*width: calc(50% - 30px);
+		margin-right: 15px;*/
+		&:last-child {
+			//margin-right: 0;
+			text-align: right;
+		}
 	}
 	&__whatspp {
 		display: inline-flex;
@@ -1713,6 +1728,43 @@ body.hidden {
 				transition: all .2s linear;
 			}
 			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__icon-link {
+		display: inline-flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $bl;
+		line-height: $lh;
+		img {
+			width: 18px;
+			margin-left: 10px;
+		}
+		span {
+			position: relative;
+			&:after {
+				content: "";
+				width: 100%;
+				height: 1px;
+				background-color: $bl;
+				opacity: 0.25;
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+				z-index: 1;
+				transition: all .2s linear;
+			}
+		}
+		
+		&:hover {
+			span {
 				&:after {
 					opacity: 1;
 				}
@@ -2639,6 +2691,13 @@ body.hidden {
 		}
 		&__link {
 			display: inline-block;
+		}
+		&__icon-link {
+			flex-direction: row;
+			img {
+				margin-right: 10px;
+				margin-left: 0;
+			}
 		}
 		&__map {
 			display: none;
