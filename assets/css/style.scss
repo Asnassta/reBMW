@@ -1537,7 +1537,7 @@ body.hidden {
 		font-weight: 700;
 		color: $bl;
 		line-height: $lh;
-		text-align: center;
+		//text-align: center;
 		margin-bottom: 20px;
 		text-transform: uppercase;
 		display: none;
@@ -2367,7 +2367,7 @@ body.hidden {
 	}
 	.history {
 		&__title {
-			text-align: center;
+			//text-align: center;
 		}
 		&__inner {
 			display: block;
@@ -2397,7 +2397,7 @@ body.hidden {
 			width: 100%;
 			padding-right: 0;
 			margin-bottom: 24px;
-			text-align: center;
+			//text-align: center;
 		}
 		&__info {
 			width: 100%;
@@ -2435,7 +2435,7 @@ body.hidden {
 		}
 		&__title {
 			margin-bottom: 20px;
-			text-align: center;
+			//text-align: center;
 		}
 		&__description {
 			margin-bottom: 30px;
@@ -2581,7 +2581,7 @@ body.hidden {
 		}
 		&__title {
 			margin-bottom: 24px;
-			text-align: center;
+			//text-align: center;
 		}
 		&__description {
 			margin-bottom: 32px;
@@ -2590,7 +2590,7 @@ body.hidden {
 
 	.projects {
 		&__title {
-			text-align: center;
+			//text-align: center;
 		}
 		&__inner {
 			display: block;
@@ -2615,7 +2615,7 @@ body.hidden {
 			margin-bottom: 35px;
 		}
 		&__title {
-			text-align: center;
+			//text-align: center;
 			margin-right: 0;
 			font-weight: 700;
 		}
@@ -2972,7 +2972,7 @@ body.hidden {
 @media(max-width: 376px) {
 	.application {
 		&__title {
-			padding: 0 70px;
+			//padding: 0 70px;
 		}
 	}
 }

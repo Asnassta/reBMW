@@ -2349,7 +2349,6 @@ body.hidden {
     font-weight: 700;
     color: #232529;
     line-height: 1.15;
-    text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
     display: none; }
@@ -2967,8 +2966,6 @@ body.hidden {
         width: 100px; }
     .intro.intro_sr .intro__description {
       margin-bottom: 90px; }
-  .history__title {
-    text-align: center; }
   .history__inner {
     display: block; }
   .history__info {
@@ -2987,8 +2984,7 @@ body.hidden {
   .advantages__head {
     width: 100%;
     padding-right: 0;
-    margin-bottom: 24px;
-    text-align: center; }
+    margin-bottom: 24px; }
   .advantages__info {
     width: 100%; }
   .advantages__item {
@@ -3014,8 +3010,7 @@ body.hidden {
       .models__blur:after {
         border-radius: 50%; }
     .models__title {
-      margin-bottom: 20px;
-      text-align: center; }
+      margin-bottom: 20px; }
     .models__description {
       margin-bottom: 30px; }
   .service_min .service__title {
@@ -3116,12 +3111,9 @@ body.hidden {
   .laboratory__inner {
     margin-top: -15px; }
   .laboratory__title {
-    margin-bottom: 24px;
-    text-align: center; }
+    margin-bottom: 24px; }
   .laboratory__description {
     margin-bottom: 32px; }
-  .projects__title {
-    text-align: center; }
   .projects__inner {
     display: block;
     margin-left: 0; }
@@ -3135,7 +3127,6 @@ body.hidden {
   .application__header {
     margin-bottom: 35px; }
   .application__title {
-    text-align: center;
     margin-right: 0;
     font-weight: 700; }
   .application__form {
@@ -3334,10 +3325,6 @@ body.hidden {
     font-size: 15px; }
   .contact__data br {
     display: block; } }
-
-@media (max-width: 376px) {
-  .application__title {
-    padding: 0 70px; } }
 
 @media (max-width: 360px) {
   .title-big {
@@ -4988,8 +4975,7 @@ body.hidden {
       height: 28px;
       left: -50px; }
   .info-slider__title {
-    margin-bottom: 24px;
-    text-align: center; }
+    margin-bottom: 24px; }
   .info-slider__box {
     display: block; }
     .info-slider__box_pc .info-slider__info {
@@ -5171,7 +5157,6 @@ body.hidden {
     .products__btn {
       margin-top: 24px; }
     .products__title {
-      text-align: center;
       margin-bottom: 30px; }
     .products__inner .products__box {
       width: calc(100% - 15px); }
