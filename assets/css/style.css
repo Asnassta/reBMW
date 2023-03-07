@@ -801,7 +801,7 @@
     font-family: "Arial", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    color: #232529;
+    color: #999999;
     line-height: 1.125;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1024,6 +1024,8 @@ body.hidden {
     .btn_onblack:hover {
       -webkit-box-shadow: 0px 7px 15px #1C3B65;
       box-shadow: 0px 7px 15px #1C3B65; }
+  .btn.inactive {
+    background-color: #999999; }
 
 .btn-wrapper {
   margin-top: 40px;
@@ -2161,6 +2163,14 @@ body.hidden {
 
 .laboratory__description {
   margin-bottom: 40px; }
+
+.laboratory__subtext {
+  text-align: right;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #232529;
+  line-height: 1.15; }
 
 /*==========/laboratory============*/
 /*============Projects=========*/
