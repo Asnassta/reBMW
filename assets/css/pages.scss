@@ -1510,14 +1510,303 @@
 }
 /*=========/quote-box========*/
 
-/*=========About-box======*/
-.about-box {
-
+/*=========Cars======*/
+.cars {
+	&__title {
+		margin-bottom: 25px;
+	}
+	&__description {
+		margin-bottom: 40px;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -30px;
+		margin-bottom: -30px;
+		>* {
+			width: calc(25% - 30px);
+			margin-left: 30px;
+			margin-bottom: 30px;
+		}
+	}
+	&__item {
+		border: 1px solid #e7e8e9;
+		transition: all .2s linear;
+		&:hover {
+			background-color: $blue;
+			.cars__name {
+				color: $wh;
+			}
+			.cars__models {
+				color: $wh;
+			}
+		}
+	}
+	&__photo {
+		img {
+			width: 100%;
+		}
+	}
+	&__info {
+		padding: 0 25px 50px;
+	}
+	&__name {
+		font-family: $ff;
+		font-size: 18px;
+		font-weight: 700;
+		color: $bl;
+		line-height: 1.222;
+		margin-bottom: 3px;
+		transition: all .2s linear;
+	}
+	&__models {
+		font-family: $ff;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.3;
+		color: #939393;
+		transition: all .2s linear;
+	}
 }
-/*=========/about-box======*/
+/*=========/cars======*/
+
+/*======Calculator=======*/
+.calculator {
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 40px;
+	}
+	&__car {
+		width: 45%;
+		margin-right: 20px;
+		img {
+			width: 100%;
+		}
+	}
+	&-infobox {
+		width: 50%;
+		border: 7px solid #e7e8e9;
+		padding: 45px;
+		&__title {
+			font-family: $ffi;
+			font-weight: 700;
+			font-size: 18px;
+			color: $bl;
+			line-height: 1.2;
+			margin-bottom: 15px;
+		}
+		&__price {
+			font-family: $ff;
+			font-size: 36px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1;
+			margin-bottom: 15px;
+		}
+		&__description {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+		}
+	}
+	&-list {
+		&__inner {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -30px;
+			>* {
+				width: calc(25% - 30px);
+				margin-left: 30px;
+				margin-bottom: 30px;
+				&.calculator-list__item_big {
+					width: calc(50% - 30px);
+				}
+				&.calculator-list__result {
+					width: calc(50% - 30px);
+				}
+			}
+		}
+		&__item {
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			box-shadow: 0px 0px 6px rgba(0, 0, 0, .15);
+			padding: 35px;
+			position: relative;
+			transition: all .2s linear;
+			&_big {
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				.calculator-list__info {
+					margin-bottom: 0;
+				}
+				.calculator-list__icon {
+					margin-bottom: 0;
+					margin-right: 25px;
+				}
+			}
+			&:hover {
+				background-color: #3873dc;
+				.calculator-list__icon {
+					svg {
+						fill: $wh;
+					}
+				}
+				.calculator-list__name,
+				.calculator-list__description,
+				.calculator-list__price {
+					color: $wh;
+				}
+			}
+			&.checked {
+				background-color: #3873dc;
+				.calculator-list__icon {
+					svg {
+						fill: $wh;
+					}
+				}
+				.calculator-list__name,
+				.calculator-list__description,
+				.calculator-list__price {
+					color: $wh;
+				}
+				.calculator-list__checkbox {
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&__checkbox {
+			width: 18px;
+			height: 18px;
+			background-color: $wh;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			position: absolute;
+			top: 25px;
+			right: 25px;
+			z-index: 1;
+			&:before {
+				content: "";
+				width: 12px;
+				height: 12px;
+				background: url("../images/check.svg") center no-repeat;
+				background-size: contain;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				opacity: 0;
+			}
+		}
+		&__icon {
+			margin-bottom: 10px;
+			svg {
+				width: 43px;
+				height: 43px;
+				fill: $blue;
+				transition: all .2s linear;
+			}
+		}
+		&__name {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 700;
+			color: $bl;
+			line-height: 1.2;
+			margin-bottom: 10px;
+			transition: all .2s linear;
+		}
+		&__description {
+			font-family: $ff;
+			font-size: 14px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+			transition: all .2s linear;
+		}
+		&__info {
+			margin-bottom: 40px;
+		}
+		&__price {
+			font-family: $ff;
+			font-size: 18px;
+			font-weight: 400;
+			color: $bl;
+			line-height: 1.5;
+			span {
+				font-weight: 700;
+			}
+		}
+		&__result {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border: 2px dashed #3873dc;
+			padding: 35px;
+			&-desc {
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 700;
+				color: #3873dc;
+			}
+			&-price {
+				font-family: $ff;
+				font-size: 16px;
+				font-weight: 400;
+				color: #3873dc;
+				span {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.btn {
+		font-size: 14px;
+		padding: 20.5px 17px;
+	}
+}
+/*======/calculator=======*/
 
 
 /*============Adaptive=============*/
+@media(max-width: 1200px) {
+	.calculator {
+		&-list {
+			&__inner {
+				margin-left: -15px;
+				>* {
+					width: calc(33.33333% - 15px);
+					margin-left: 15px;
+					margin-bottom: 15px;
+					&.calculator-list__item_big {
+						width: calc(50% - 15px);
+					}
+					&.calculator-list__result {
+						width: calc(50% - 15px);
+					}
+				}
+			}
+			&__item {
+				padding: 25px 35px 25px 25px;
+			}
+			&__info {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
 @media(max-width: 991px) {
 	.article {
 		&__photo {
@@ -1537,6 +1826,23 @@
 				padding: 40px 15px;
 				margin: 0 -15px 10px;
 			}
+		}
+	}
+	.cars {
+		&__list {
+			margin-left: -10px;
+			margin-bottom: -10px;
+			>* {
+				width: calc(25% - 10px);
+				margin-left: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		&__info {
+			padding: 0 10px 20px;
+		}
+		&__models {
+			font-size: 12px;
 		}
 	}
 	.additions {
@@ -1678,6 +1984,23 @@
 	}
 }
 @media(max-width: 860px) {
+	.calculator {
+		&__inner {
+			display: block;
+		}
+		&__title {
+			margin-bottom: 25px;
+		}
+		&__car {
+			width: 100%;
+			margin-bottom: -7%;
+			margin-top: -10%;
+		}
+		&-infobox {
+			width: 100%;
+			padding: 25px;
+		}
+	}
 	.maintenance {
 		&__inner {
 			margin-top: 24px;
@@ -1718,6 +2041,32 @@
 	}
 }
 @media(max-width: 766px) {
+	.calculator {
+		&-list {
+			&__inner {
+				>* {
+					width: calc(50% - 15px);
+				}
+			}
+			&__checkbox {
+				right: 15px;
+				top: 15px;
+			}
+		}
+	}
+	.cars {
+		&__title {
+			margin-bottom: 15px;
+		}
+		&__list {
+			>* {
+				width: calc(50% - 10px);
+			}
+		}
+		&__name {
+			font-size: 14px;
+		}
+	}
 	.stages {
 		&__inner {
 			margin-top: 24px;
@@ -2112,6 +2461,52 @@
 	}
 }
 @media(max-width: 546px) {
+	.calculator {
+		.btn {
+			display: none;
+		}
+		&-list {
+			&__inner {
+				margin-left: 0;
+				margin-bottom: -15px;
+				>* {
+					width: 100%;
+					margin-left: 0;
+					&.calculator-list__item_big {
+						width: 100%;
+					}
+					&.calculator-list__result {
+						width: 100%;
+					}
+				}
+			}
+			&__item {
+				&_big {
+					flex-direction: column;
+					align-items: flex-start;
+					.calculator-list__icon {
+						margin-bottom: 10px;
+						margin-right: 0;
+					}
+				}
+			}
+			&__result {
+				position: fixed;
+				bottom: 0;
+				z-index: 100;
+				left: 0;
+				width: 100%;
+				margin-bottom: 0;
+				background-color: $wh;
+				padding: 20px;
+				border: none;
+				box-shadow: 0px -2px 8px rgba(0, 0, 0, .10);
+				&-desc, &-price {
+					color: $bl;
+				}
+			}
+		}
+	}
 	.quote-box {
 		padding: 20px 15px;
 		margin-top: 25px;

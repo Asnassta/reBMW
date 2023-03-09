@@ -61,6 +61,12 @@ $(document).ready(function() {
     $(this).toggleClass("active");
   });
   /*==========/FAQ (accordion)=========*/
+
+  /*======Calculator (check)=============*/
+  $(".calculator-list__item").on("click", function() {
+    $(this).toggleClass("checked");
+  });
+  /*==========/calculator (check)=========*/
 });
 
 new Swiper('.certificates', {
