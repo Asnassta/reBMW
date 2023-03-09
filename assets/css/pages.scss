@@ -1655,16 +1655,18 @@
 				}
 			}
 			&:hover {
-				background-color: #3873dc;
-				.calculator-list__icon {
-					svg {
-						fill: $wh;
+				@media(min-width: 1025px) {
+					background-color: #3873dc;
+					.calculator-list__icon {
+						svg {
+							fill: $wh;
+						}
 					}
-				}
-				.calculator-list__name,
-				.calculator-list__description,
-				.calculator-list__price {
-					color: $wh;
+					.calculator-list__name,
+					.calculator-list__description,
+					.calculator-list__price {
+						color: $wh;
+					}
 				}
 			}
 			&.checked {

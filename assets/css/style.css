@@ -4960,14 +4960,15 @@ body.hidden {
     .calculator-list__item_big .calculator-list__icon {
       margin-bottom: 0;
       margin-right: 25px; }
-  .calculator-list__item:hover {
-    background-color: #3873dc; }
-    .calculator-list__item:hover .calculator-list__icon svg {
-      fill: #ffffff; }
-    .calculator-list__item:hover .calculator-list__name,
-    .calculator-list__item:hover .calculator-list__description,
-    .calculator-list__item:hover .calculator-list__price {
-      color: #ffffff; }
+  @media (min-width: 1025px) {
+    .calculator-list__item:hover {
+      background-color: #3873dc; }
+      .calculator-list__item:hover .calculator-list__icon svg {
+        fill: #ffffff; }
+      .calculator-list__item:hover .calculator-list__name,
+      .calculator-list__item:hover .calculator-list__description,
+      .calculator-list__item:hover .calculator-list__price {
+        color: #ffffff; } }
   .calculator-list__item.checked {
     background-color: #3873dc; }
     .calculator-list__item.checked .calculator-list__icon svg {
