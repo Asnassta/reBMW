@@ -113,8 +113,8 @@
 			box-shadow: none;
 			font-family: $ff;
 			font-size: 16px;
-			font-weight: 400;
-			color: #999999;
+			font-weight: 700;
+			color: $bl;
 			line-height: 1.125;
 			appearance: none;
 		}
@@ -153,8 +153,8 @@
 			box-shadow: none;
 			font-family: $ff;
 			font-size: 16px;
-			font-weight: 400;
-			color: $gray2;
+			font-weight: 700;
+			color: $bl;
 			line-height: 1.125;
 			appearance: none;
 			&::placeholder {

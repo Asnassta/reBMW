@@ -759,8 +759,8 @@
     box-shadow: none;
     font-family: "Arial", sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    color: #999999;
+    font-weight: 700;
+    color: #232529;
     line-height: 1.125;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -800,8 +800,8 @@
     box-shadow: none;
     font-family: "Arial", sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    color: #999999;
+    font-weight: 700;
+    color: #232529;
     line-height: 1.125;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1525,8 +1525,6 @@ body.hidden {
     -webkit-transition: all .2s linear;
     -o-transition: all .2s linear;
     transition: all .2s linear; }
-  .advantages__name.active:before, .advantages__name.active:after {
-    background-color: #828282; }
 
 .advantages__text {
   display: none;
