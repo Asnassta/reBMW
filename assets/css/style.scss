@@ -317,12 +317,12 @@ body.hidden {
 		font-size: 48px;
 		font-weight: 700;
 		color: $wh;
-		line-height: 1.33333;
-		letter-spacing: 0.02em;
+		line-height: 1.22;
+		//letter-spacing: 0.02em;
 		text-transform: uppercase;
 		margin-bottom: 20px;
 		@media(max-width: 1600px) {
-			@include adaptive-font(48, 26);
+			@include adaptive-font(48, 22);
 		}
 	}
 	&__description {
@@ -2338,11 +2338,11 @@ body.hidden {
 	.intro {
 		&.intro_sr {
 			padding: 0 0 60px;
-			background: url("../images/bg-sr.png") left bottom no-repeat, #83776D;
+			background: url("../images/bg-sr.png") 60% 50% no-repeat, #83776D;
 			background-size: cover;
 			&:after {
-				background: linear-gradient(87.4deg, #000000 21.22%, rgba(0, 0, 0, 0) 70.95%);
-				opacity: 0.75;
+				background: linear-gradient(87.4deg, #000000 21.22%, rgba(0, 0, 0, 0) 80.95%);
+				opacity: 0.95;
 			}
 			.breadcrumbs {
 				background-color: $wh;
@@ -2758,7 +2758,7 @@ body.hidden {
 	}
 	.btn {
 		font-size: 14px;
-		padding: 15.5px 29px;
+		padding: 15.5px 25px;
 	}
 	.intro {
 		background-position: center right 40%;
@@ -2925,6 +2925,16 @@ body.hidden {
 }
 
 @media(max-width: 414px) {
+	.intro {
+		&_main {
+			padding-bottom: 100px;
+			.intro__description {
+				text-transform: uppercase;
+				font-size: 14px;
+				margin-bottom: 60px;
+			}
+		}
+	}
 	.btn-wrapper {
 		margin-top: 24px;
 		.btn {
