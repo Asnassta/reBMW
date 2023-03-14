@@ -2044,8 +2044,8 @@ body.hidden {
 	.intro {
 		&.intro_sr {
 			padding: 55px 0 60px;
-			background-position: 60% 20%;
-			background-size: 200% auto;
+			//background-position: 60% 20%;
+			//background-size: 200% auto;
 		}
 	}
 	.about {
@@ -2338,7 +2338,7 @@ body.hidden {
 	.intro {
 		&.intro_sr {
 			padding: 0 0 60px;
-			background: url("../images/bg-sr.png") 65% 20px no-repeat, #83776D;
+			background: url("../images/bg-sr.png") left bottom no-repeat, #83776D;
 			background-size: cover;
 			&:after {
 				background: linear-gradient(87.4deg, #000000 21.22%, rgba(0, 0, 0, 0) 70.95%);
