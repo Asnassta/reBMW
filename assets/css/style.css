@@ -1163,7 +1163,8 @@ body.hidden {
   padding: 150px 0 175px; }
   .intro.intro_sr {
     padding: 55px 0 130px;
-    background: url("../images/bg-sr.png") 42% 20% no-repeat;
+    background: url("../images/bg-sr.png") right bottom no-repeat;
+    background-size: cover;
     position: relative; }
     .intro.intro_sr:after {
       content: "";
