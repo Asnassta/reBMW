@@ -34,7 +34,7 @@ $(document).ready(function() {
       blockOffset = $('#'+blockID).offset().top;
  
     $("html, body").animate ({
-      scrollTop: blockOffset - 30
+      //scrollTop: blockOffset - 30
     }, 500);
   });
 /*=========/smooth scroll=============*/
