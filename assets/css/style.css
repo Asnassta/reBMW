@@ -5611,12 +5611,10 @@ body.hidden {
         margin-bottom: 0; }
     .mail-box__title {
       margin-bottom: 15px; }
-    .mail-box__text {
-      letter-spacing: -1.1px; }
-      .mail-box__text p {
-        margin-bottom: 15px; }
-      .mail-box__text span {
-        font-size: 14px; }
+    .mail-box__text p {
+      margin-bottom: 15px; }
+    .mail-box__text span {
+      font-size: 14px; }
   .photo-box {
     display: block; }
     .photo-box__text {
