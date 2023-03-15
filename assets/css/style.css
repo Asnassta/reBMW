@@ -4220,6 +4220,9 @@ body.hidden {
     min-height: 175px;
     -o-object-fit: cover;
     object-fit: cover; }
+  .info-box__photo_left img {
+    -o-object-position: left center;
+    object-position: left center; }
   .info-box__title {
     margin-bottom: 40px;
     max-width: 940px; }

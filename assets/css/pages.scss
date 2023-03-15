@@ -924,6 +924,11 @@
 			min-height: 175px;
 			object-fit: cover;
 		}
+		&_left {
+			img {
+				object-position: left center;
+			}
+		}
 	}
 	&__title {
 		margin-bottom: 40px;
