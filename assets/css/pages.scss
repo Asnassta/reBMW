@@ -922,11 +922,17 @@
 		img {
 			width: 100%;
 			min-height: 175px;
+			max-height: 500px;
 			object-fit: cover;
 		}
 		&_left {
 			img {
 				object-position: left center;
+			}
+		}
+		&_bottom {
+			img {
+				object-position: center bottom;
 			}
 		}
 	}

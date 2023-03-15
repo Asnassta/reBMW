@@ -4218,11 +4218,15 @@ body.hidden {
   .info-box__photo img {
     width: 100%;
     min-height: 175px;
+    max-height: 500px;
     -o-object-fit: cover;
     object-fit: cover; }
   .info-box__photo_left img {
     -o-object-position: left center;
     object-position: left center; }
+  .info-box__photo_bottom img {
+    -o-object-position: center bottom;
+    object-position: center bottom; }
   .info-box__title {
     margin-bottom: 40px;
     max-width: 940px; }
