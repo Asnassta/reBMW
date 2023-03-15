@@ -1005,7 +1005,7 @@
 		font-style: italic;
 		line-height: 1.6;
 		color: $gray;
-		letter-spacing: -0.45px;
+		//letter-spacing: -0.45px;
 		p {
 			margin-bottom: 18px;
 			&:last-child {
@@ -1512,6 +1512,10 @@
 
 /*========About-box==========*/
 .about-box {
+	.slider-arrows {
+		margin: 40px auto 0;
+		max-width: 262px;
+	}
 	&__inner {
 		display: flex;
 		align-items: center;
@@ -1842,6 +1846,69 @@
 }
 /*======/calculator=======*/
 
+/*======Steps======*/
+.steps {
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__item {
+		display: flex;
+		align-items: flex-start;
+		padding-bottom: 30px;
+		position: relative;
+		&:after {
+			content: "";
+			width: 3px;
+			height: 100%;
+			border-left: 3px dashed #E7E7E7;
+			position: absolute;
+			top: 0;
+			left: 23.5px;
+			z-index: 1;
+		}
+		&:last-child {
+			padding-bottom: 0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+	&__num {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex:  0 0 50px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 1px solid $blue;
+		margin-right: 20px;
+		font-family: $ff;
+		font-size: 20px;
+		font-weight: 700;
+		color: $blue;
+		background-color: $wh;
+		position: relative;
+		z-index: 2;
+	}
+	&__name {
+		font-family: $ffi;
+		font-size: 20px;
+		font-weight: 700;
+		color: $bl;
+		line-height: 1.5;
+		margin-bottom: 12px;
+		@media(max-width: 1600px) {
+			@include adaptive-font(20, 18);
+		}
+	}
+	&__btn {
+		margin-top: 40px;
+		text-align: center;
+	}
+}
+/*======/steps======*/
+
 
 /*============Adaptive=============*/
 @media(max-width: 1200px) {
@@ -1871,6 +1938,26 @@
 	}
 }
 @media(max-width: 991px) {
+	.about-box {
+		&__title {
+			margin-bottom: 24px;
+		}
+		&__inner {
+			display: block;
+		}
+		&__info {
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 24px;
+		}
+		&__photo {
+			width: 100%;
+			text-align: center;
+			img {
+				max-width: 600px;
+			}
+		}
+	}
 	.article {
 		&__photo {
 			&.mb-80 {
@@ -2104,6 +2191,26 @@
 	}
 }
 @media(max-width: 766px) {
+	.steps {
+		&__title {
+			margin-bottom: 24px;
+		}
+		&__item {
+			&:after {
+				left: 18.5px;
+			}
+		}
+		&__name {
+			margin-bottom: 10px;
+		}
+		&__num {
+			margin-right: 15px;
+			font-size: 18px;
+			width: 40px;
+			height: 40px;
+			flex: 0 0 40px;
+		}
+	}
 	.calculator {
 		&-list {
 			&__inner {
