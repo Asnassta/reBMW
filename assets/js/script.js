@@ -237,3 +237,18 @@ new Swiper('.article-slider', {
   },
   loop: true,
 });
+
+new Swiper('.about-box__slider', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.slider-arrow_next',
+    prevEl: '.slider-arrow_prev',
+  },
+  loop: true,
+});
+
+
