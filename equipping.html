@@ -12,6 +12,24 @@
 	<title>Дооснащение</title>
 </head>
 <body>
+	<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >
+			(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		   m[i].l=1*new Date();
+		   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+		   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+		   ym(79826134, "init", {
+		        clickmap:true,
+		        trackLinks:true,
+		        accurateTrackBounce:true,
+		        webvisor:true
+		   });
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/79826134" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+	
 	<!--Sprite-->
 	<svg style="display: none;">
 		<symbol id="phone-icon" viewBox="0 0 18 18">
@@ -454,7 +472,7 @@
 			</section><!--/products-->
 			<section class="application section" id="application">
 				<div class="container">
-					<form action="#" class="application__form form">
+					<form method="POST" action="send.php" class="application__form form">
 						<div class="application__header">
 							<h3 class="application__title">Записаться на сервис</h3>
 							<div class="form-agree">
@@ -465,39 +483,85 @@
 								</label>
 							</div><!--/form-agree-->
 						</div>
-						<div class="form__row form__row_20">
-							<div class="form__item">
-								<div class="form__select">
-									<div class="form__select-desc form__select-desc_auto">Что вас интересует</div>
-									<select>
-										<option value="0">Выберите услуги</option>
-										<option value="1">Механический цех</option>
-										<option value="2">Кузовной цех</option>
-										<option value="3">Дооснащение</option>
-										<option value="4">Детейлинг</option>
-									</select>
-								</div>
-							</div>
+						<div class="form__checkboxes">
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="equipping_1">
+								<label for="equipping_1">
+									<span></span>
+									<i>Дооснащение</i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="coding">
+								<label for="coding">
+									<span></span>
+									<i>Кодирование</i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="programming">
+								<label for="programming">
+									<span></span>
+									<i>Программирование</i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="repair-blocks">
+								<label for="repair-blocks">
+									<span></span>
+									<i>Ремонт блоков</i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="equipping-bmw">
+								<label for="equipping-bmw">
+									<span></span>
+									<i>Дооснащение БМВ</i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="chip-tuning">
+								<label for="chip-tuning">
+									<span></span>
+									<i>Чип тюнинг БМВ и увеличение мощности </i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="reshaping-wheel">
+								<label for="reshaping-wheel">
+									<span></span>
+									<i>Перешив руля БМВ</i>
+								</label>
+							</div><!--/form__checkbox-->
+							<div class="form__checkbox">
+								<input type="checkbox" name="equipping" id="restoration-salon">
+								<label for="restoration-salon">
+									<span></span>
+									<i>Реставрация салона</i>
+								</label>
+							</div><!--/form__checkbox-->
+						</div>
+						<div class="form__row form__row_30">
 							<div class="form__item">
 								<div class="form__input">
-									<div class="form__input-desc">Ваше имя</div>
-									<input type="text">
+									<div class="form__input-desc">VIN</div>
+									<input type="text" name="vin" placeholder="Введите VIN" required>
 								</div>
 							</div>
 							<div class="form__item">
 								<div class="form__input">
 									<div class="form__input-desc">Телефон</div>
-									<input type="text" placeholder="+ 7-XXX-XX-XX" value="+7">
+									<input type="text" name="phone" placeholder="+ 7-XXX-XX-XX" value="+ 7" required>
 								</div>
 							</div>
 							<div class="form__item">
 								<button class="btn" type="submit">
-									<span>Запись на обслуживание</span>
-									<span>Отправить</span>
+									Отправить
 								</button>
 							</div>
 						</div>
 					</form>
+					<div class="success-send">Спасибо! Ваша заявка отправлена, свяжемся с вами в ближайшее время.</div>
 				</div>
 			</section><!--/application-->
 			<section class="photogallery">
