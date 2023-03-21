@@ -732,6 +732,65 @@
   .form__radiobox input:checked + label i {
     font-weight: 700; }
 
+.form__checkboxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -24px;
+  margin-bottom: 20px; }
+  .form__checkboxes > * {
+    margin-left: 24px;
+    margin-bottom: 16px; }
+
+.form__checkbox label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer; }
+  .form__checkbox label span {
+    width: 20px;
+    height: 20px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20px;
+    flex: 0 0 20px;
+    border: 1px solid #C4C4C4;
+    margin-right: 8px;
+    position: relative; }
+    .form__checkbox label span:after {
+      content: "";
+      width: 12px;
+      height: 10px;
+      background: url("../images/check-w.svg") center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 0; }
+  .form__checkbox label i {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color: #232529;
+    line-height: 1.15; }
+
+.form__checkbox input {
+  display: none; }
+  .form__checkbox input:checked + label span {
+    background-color: #1F72E4;
+    border-color: #1F72E4; }
+    .form__checkbox input:checked + label span:after {
+      opacity: 1; }
+
 .form__select {
   position: relative;
   cursor: pointer; }
@@ -808,16 +867,20 @@
     appearance: none; }
     .form__input input::-webkit-input-placeholder {
       color: #999999;
-      opacity: 1; }
+      opacity: 1;
+      font-weight: 400; }
     .form__input input:-ms-input-placeholder {
       color: #999999;
-      opacity: 1; }
+      opacity: 1;
+      font-weight: 400; }
     .form__input input::-ms-input-placeholder {
       color: #999999;
-      opacity: 1; }
+      opacity: 1;
+      font-weight: 400; }
     .form__input input::placeholder {
       color: #999999;
-      opacity: 1; }
+      opacity: 1;
+      font-weight: 400; }
   .form__input-desc {
     padding: 0 5px 0 2px;
     background-color: #ffffff;
@@ -907,7 +970,12 @@
   .form__row .form__item_37 {
     width: 100%; }
   .form__select select {
-    font-size: 15px; } }
+    font-size: 15px; }
+  .form__checkboxes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 /*==========/adaptive============*/
 /*Reset
@@ -986,10 +1054,29 @@ body.hidden {
 .wrapper {
   min-height: 100vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .section {
   margin-bottom: 80px; }
+
+.success-send {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.15;
+  padding-top: 35px;
+  display: none;
+  color: #232529; }
 
 .btn {
   display: -webkit-inline-box;
@@ -1101,6 +1188,14 @@ body.hidden {
     color: #1F72E4; }
   .description .bold {
     font-weight: 700; }
+
+.error {
+  text-align: center;
+  padding: 85px 0; }
+  .error__photo img {
+    max-width: 100%; }
+  .error .btn {
+    margin-top: 40px; }
 
 /*==========Slider-arrow=========*/
 .slider-arrows {
@@ -2336,6 +2431,16 @@ body.hidden {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto; }
+  .application .form__row_30 {
+    margin-left: -30px; }
+    .application .form__row_30 .form__item {
+      margin-left: 30px;
+      width: calc(36.7% - 30px); }
+      .application .form__row_30 .form__item:last-child {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: auto; }
   .application .form__row .btn span:nth-child(2) {
     display: none; }
 
@@ -2749,6 +2854,11 @@ body.hidden {
     flex-wrap: wrap; }
     .application .form__row .form__item {
       width: calc(50% - 20px); }
+    .application .form__row_30 {
+      margin-left: -20px; }
+      .application .form__row_30 .form__item {
+        width: calc(50% - 20px);
+        margin-left: 20px; }
     .application .form__row .btn {
       height: 100%; }
   .contact__box {

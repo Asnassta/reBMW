@@ -63,10 +63,23 @@ body.hidden {
 	min-height: 100vh;
 	overflow: hidden;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .section {
 	margin-bottom: 80px;
+}
+
+.success-send {
+	font-family: $ff;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: $lh;
+	padding-top: 35px;
+	display: none;
+	color: $bl;
 }
 
 .btn {
@@ -186,6 +199,19 @@ body.hidden {
 	}
 	.bold {
 		font-weight: 700;
+	}
+}
+
+.error {
+	text-align: center;
+	padding: 85px 0;
+	&__photo {
+		img {
+			max-width: 100%;
+		}
+	}
+	.btn {
+		margin-top: 40px;
 	}
 }
 
@@ -1511,6 +1537,17 @@ body.hidden {
 					flex: 1 1 auto;
 				}
 			}
+			&_30 {
+				margin-left: -30px;
+				.form__item {
+					margin-left: 30px;
+					width: calc(36.7% - 30px);
+					&:last-child {
+						flex: 1 1 auto;
+						width: auto;
+					}
+				}
+			}
 			.btn {
 				span {
 					&:nth-child(2) {
@@ -2026,6 +2063,13 @@ body.hidden {
 				flex-wrap: wrap;
 				.form__item {
 					width: calc(50% - 20px);
+				}
+				&_30 {
+					margin-left: -20px;
+					.form__item {
+						width: calc(50% - 20px);
+						margin-left: 20px;
+					}
 				}
 				.btn {
 					height: 100%;

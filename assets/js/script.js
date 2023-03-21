@@ -7,6 +7,26 @@
 };
 
 $(document).ready(function() {
+
+/*=========Form================*/
+  $("form").submit(function (event) {
+ 
+ 
+    f = $(this);
+    event.preventDefault();
+    var formData = f.serialize();
+ 
+    $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: formData,
+        success: function(data) {
+          f.parent().find('.success-send').show(333);
+      },
+    });
+  });
+  /*=========/form================*/
+
   /*======Header__menu=============*/
   $(".header__burger").on("click", function() {
     $(".header-subnav").toggleClass('active');
@@ -34,7 +54,7 @@ $(document).ready(function() {
       blockOffset = $('#'+blockID).offset().top;
  
     $("html, body").animate ({
-      //scrollTop: blockOffset - 30
+      scrollTop: blockOffset - 30
     }, 500);
   });
 /*=========/smooth scroll=============*/
