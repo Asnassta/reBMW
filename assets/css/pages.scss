@@ -2020,6 +2020,68 @@
 }
 /*======list-dots======*/
 
+/*==========Decision==========*/
+.decision {
+	&__title {
+		margin-bottom: 40px;
+	}
+	&__inner {
+		display: flex;
+	}
+	&__info {
+		padding: 40px 0 40px 50px;
+		width: 52%;
+		position: relative;
+		z-index: 1;
+	}
+	&__risk {
+		width: 48%;
+		border: 5px solid #E7E8E9;
+		padding: 40px 50px;
+	}
+	&__subtitle {
+		font-family: $ffi;
+		font-size: 24px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.5;
+		margin-bottom: 20px;
+		@media(max-width: 1600px) {
+			@include adaptive-font(24, 16);
+		}
+		&.blue {
+			color: $blue;
+			font-weight: 700;
+		}
+	}
+	&__box {
+		padding: 40px 50px;
+		background-color: $blue;
+		font-family: $ff;
+		font-size: 16px;
+		font-weight: 400;
+		color: $wh;
+		line-height: 1.5;
+		@media(max-width: 1600px) {
+			@include adaptive-font(16, 14);
+		}
+	}
+	&__arrows {
+		width: 52%;
+		padding-left: 50px;
+		margin-left: auto;
+		transform: translateY(-100%);
+		position: relative;
+		z-index: 10;
+		.slider-arrows {
+			width: 262px;
+			margin: 0 auto;
+		}
+
+	}
+}
+/*==========/decision==========*/
+
 
 /*============Adaptive=============*/
 @media(max-width: 1200px) {
@@ -2050,6 +2112,33 @@
 	}
 }
 @media(max-width: 991px) {
+	.decision {
+		&__inner {
+			display: block;
+		}
+		&__title {
+			margin-bottom: 24px;
+		}
+		&__risk {
+			padding: 24px;
+			width: 100%;
+			margin-bottom: 24px;
+		}
+		&__info {
+			padding: 0;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		&__box {
+			padding: 24px;
+		}
+		&__arrows {
+			transform: translateY(0);
+			padding-left: 0;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
 	.about-box {
 		&__title {
 			margin-bottom: 24px;

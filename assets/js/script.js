@@ -271,4 +271,15 @@ new Swiper('.about-box__slider', {
   loop: true,
 });
 
-
+new Swiper('.decision__slider', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.slider-arrow_next',
+    prevEl: '.slider-arrow_prev',
+  },
+  loop: true,
+});

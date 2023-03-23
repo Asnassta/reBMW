@@ -221,6 +221,18 @@
 				font-weight: 400;
 			}
 		}
+		input[name="phone"] {
+			position: relative;
+			&:after {
+				content: "";
+				width: 10%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+		}
 		&-desc {
 			padding: 0 5px 0 2px;
 			background-color: $wh;
