@@ -1593,21 +1593,6 @@ body.hidden {
 		}
 	}
 	.form {
-		&__item {
-			&:nth-last-child(2) {
-				.form__input {
-					&:after {
-						content: "";
-						width: 15%;
-						height: 100%;
-						position: absolute;
-						top: 0;
-						left: 0;
-						z-index: 1;
-					}
-				}
-			}
-		}
 		&__row {
 			margin-left: -20px;
 			.form__item {

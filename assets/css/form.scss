@@ -221,18 +221,6 @@
 				font-weight: 400;
 			}
 		}
-		input[name="phone"] {
-			position: relative;
-			&:after {
-				content: "";
-				width: 10%;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 1;
-			}
-		}
 		&-desc {
 			padding: 0 5px 0 2px;
 			background-color: $wh;
@@ -247,6 +235,23 @@
 			z-index: 1;
 			transform: translateY(-50%);
 			pointer-events: none;
+		}
+		&-tel {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 700;
+			color: $bl;
+			line-height: 1.125;
+			position: absolute;
+			top: 50%;
+			left: 16px;
+			z-index: 1;
+			transform: translateY(-50%);
+		}
+		&-phone {
+			input {
+				padding-left: 42px;
+			}
 		}
 	}
 	&-agree {

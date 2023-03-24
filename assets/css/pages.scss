@@ -1345,6 +1345,12 @@
 			font-size: 16px;
 		}
 	}
+	&_icons {
+		.procedure__item {
+			padding: 20px 16px;
+			min-height: auto;
+		}
+	}
 	&__inner {
 		margin: 30px 0 -30px -20px;
 		display: flex;
@@ -1363,6 +1369,10 @@
 			width: calc(20% - 20px);
 			min-height: 190px;
 		}
+	}
+	&__icon {
+		margin-bottom: 16px;
+		height: 32px;
 	}
 	&__number {
 		font-family: $ffi;
@@ -2081,6 +2091,71 @@
 	}
 }
 /*==========/decision==========*/
+
+/*=========Desc-list=====*/
+.desc-list {
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 24px;
+	}
+	&__block {
+		margin-bottom: 60px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 24px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		>* {
+			width: calc(50% - 20px);
+			margin-right: 40px;
+			&:nth-child(even) {
+				margin-right: 0;
+			}
+		}
+	}
+	&__photo {
+		img {
+			max-width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__name {
+		font-family: $ffi;
+		font-size: 24px;
+		font-weight: 700;
+		color: $bl;
+		line-height: 1.25;
+		margin-bottom: 16px;
+		@media(max-width: 1600px) {
+			@include adaptive-font(24, 16);
+		}
+	}
+	&__data {
+		font-family: $ffi;
+		font-size: 16px;
+		font-weight: 600;
+		color: $bl;
+		line-height: 1.5;
+		@media(max-width: 1600px) {
+			@include adaptive-font(16, 14);
+		}
+	}
+	&__description {
+		font-family: $ffi;
+		color: $bl;
+	}
+}
+/*=========/desc-list=====*/
 
 
 /*============Adaptive=============*/
@@ -2872,6 +2947,30 @@
 	}
 }
 @media(max-width: 546px) {
+	.desc-list {
+		&__title {
+			margin-bottom: 24px;
+		}
+		&__block {
+			margin-bottom: 40px;
+		}
+		&__item {
+			display: block;
+			>* {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 16px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__photo {
+			img {
+				width: 100%;
+			}
+		}
+	}
 	.list-dots {
 		font-size: 14px;
 	}
