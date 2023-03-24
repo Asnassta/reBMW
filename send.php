@@ -23,7 +23,7 @@ if(empty($_POST['vin']))
     $text = "<b>Новая заявка</b>
 
 Имя: ".$name."
-Телефон: ".$phone."
+Телефон: +7".str_replace(' ', '', $phone)."
 Услуга: ".$service;
 }
 else
